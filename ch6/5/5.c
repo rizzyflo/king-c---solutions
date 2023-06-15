@@ -6,15 +6,11 @@ int main(void) {
 	printf("Enter a number: ");
 	scanf_s("%d", &user_number);
 
-	last_digit = user_number % 10;
-	printf("%d", last_digit);
-
-	do {
-		user_number /= 10;
+	while (user_number != 0) {
 		last_digit = user_number % 10;
+		user_number /= 10;
 		printf("%d", last_digit);
-
-	} while (user_number / 10 != 0);
+	}
 
 	return 0;
 }
